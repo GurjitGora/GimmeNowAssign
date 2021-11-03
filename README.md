@@ -10,7 +10,7 @@ amplify_auth_cognito: ^0.2.6
 amplify_core: ^0.2.6
 
 amplify_flutter: ^0.2.0
-# import flutter maps 
+# flutter maps 
 flutter_map: ^0.14.0
 
 This project is a starting point for a Flutter application.
