@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gimmenow-dev-202545-authRole",
+      "UnauthRoleArn": "arn:aws:iam::031378759221:role/amplify-gimmenow-dev-202545-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::031378759221:role/amplify-gimmenow-dev-202545-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-gimmenow-dev-202545-deployment",
+      "UnauthRoleName": "amplify-gimmenow-dev-202545-unauthRole",
+      "StackName": "amplify-gimmenow-dev-202545",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:031378759221:stack/amplify-gimmenow-dev-202545/07dd5f90-3c88-11ec-9fc6-066bb65678e8",
+      "AmplifyAppId": "dd04j0rvanb7z"
+    },
+    "categories": {
+      "auth": {
+        "gimmenowc2dc0d32": {}
+      }
+    }
+  }
+}
