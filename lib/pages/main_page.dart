@@ -30,8 +30,8 @@ class _MainPageState extends State<MainPage> {
                 } on AuthException catch (e) {
                   print(e.message);
                 }
-                Navigator.of(context)
-                    .popUntil(ModalRoute.withName('/LandingPage'));
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    '/landing', (Route<dynamic> route) => false);
               },
               icon: Icon(Icons.exit_to_app_rounded),
             ),
@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
       ),
       body: FlutterMap(
         options: MapOptions(
-          center: latLng.LatLng(51.5, -0.09),
+          center: latLng.LatLng(-37.8226, 145.0354),
           zoom: 13.0,
         ),
         layers: [
@@ -55,11 +55,15 @@ class _MainPageState extends State<MainPage> {
           MarkerLayerOptions(
             markers: [
               Marker(
-                width: 80.0,
-                height: 80.0,
-                point: latLng.LatLng(51.5, -0.09),
+                width: 100.0,
+                height: 100.0,
+                point: latLng.LatLng(-37.8226, 145.0354),
                 builder: (ctx) => Container(
-                  child: FlutterLogo(),
+                  child: IconButton(
+                      icon: Icon(Icons.location_on),
+                      color: Colors.red,
+                      iconSize: 35.0,
+                      onPressed: () {}),
                 ),
               ),
             ],

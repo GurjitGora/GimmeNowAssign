@@ -1,10 +1,8 @@
-
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
-
 import 'package:flutter/material.dart';
 import 'package:gimmenow_assign/pages/landing_page.dart';
-
+import 'package:gimmenow_assign/pages/loading_page.dart';
 import 'amplifyconfiguration.dart';
 
 void main() {
@@ -28,15 +26,13 @@ class _MyAppState extends State<MyApp> {
   void _initAmplifyFlutter() async {
     AmplifyAuthCognito auth = AmplifyAuthCognito();
 
-
     Amplify.addPlugins([auth]);
 
     // Initialize AmplifyFlutter
     try {
       await Amplify.configure(amplifyconfig);
     } on AmplifyAlreadyConfiguredException {
-      print(
-          "Amplify was already configured. Looks like app restarted on android.");
+      print("Amplify was already configured. Looks like app restarted");
     }
 
     setState(() {
@@ -52,10 +48,14 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        initialRoute: '/landing',
+        routes: {
+          '/landing': (context) => LandingPage(),
+          '/loading': (context) => LoadingPage(),
+        },
         title: 'Flutter Amplify App',
         theme: ThemeData(
           primarySwatch: Colors.blue,

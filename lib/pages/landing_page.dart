@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:gimmenow_assign/pages/main_page.dart';
 import 'package:gimmenow_assign/screens/sign_in_view.dart';
@@ -50,16 +49,15 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Landing Page"),
+          title: Text("AWS Authentication"),
         ),
         body: Center(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                openDialogButton("Sign In", onSignInSuccess, SignInView()),
-                openDialogButton(
-                    "Sign Up", () => {print("sign up success")}, SignUpView())
-              ],
-            )));
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            openDialogButton("Sign In", onSignInSuccess, SignInView()),
+            openDialogButton("Sign Up", () => {print("Success")}, SignUpView())
+          ],
+        )));
   }
 }
